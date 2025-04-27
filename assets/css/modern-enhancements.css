@@ -10,10 +10,10 @@ html {
 
 /* CSS Variables for contrast control */
 :root {
-  --button-gradient-dark: linear-gradient(135deg, var(--orange-yellow-crayola), var(--vegas-gold));
-  --button-gradient-light: linear-gradient(135deg, hsl(35, 100%, 60%), hsl(30, 100%, 55%));
-  --button-text-color-dark: var(--orange-yellow-crayola);
-  --button-text-color-light: var(--orange-yellow-crayola);
+  --button-gradient-dark: linear-gradient(135deg, var(--blue-crayola), var(--deep-blue));
+  --button-gradient-light: linear-gradient(135deg, hsl(210, 100%, 60%), hsl(200, 100%, 55%));
+  --button-text-color-dark: var(--blue-crayola);
+  --button-text-color-light: var(--blue-crayola);
   --text-shadow-dark: 0 1px 2px rgba(0, 0, 0, 0.5);
   --text-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.2);
   --button-contrast-outline: rgba(255, 255, 255, 0.25);
@@ -21,9 +21,9 @@ html {
 
 /* Improved focus states for accessibility with rounded outlines */
 a:focus, button:focus, input:focus, textarea:focus, [tabindex]:focus {
-  outline: 3px solid var(--orange-yellow-crayola);
+  outline: 3px solid var(--blue-crayola);
   outline-offset: 2px;
-  border-radius: 8px;
+  border-bottom-color: #2196F3;
 }
 
 /* Modern button styling with subtle hover effects and improved contrast */
@@ -63,7 +63,7 @@ a:not(.btn):not(.service-item):not(.project-img) {
 }
 
 a:not(.btn):not(.service-item):not(.project-img):hover {
-  color: var(--orange-yellow-crayola);
+  color: var(--blue-crayola);
 }
 
 /* Improved card hover effects */
@@ -123,7 +123,7 @@ a:not(.btn):not(.service-item):not(.project-img):hover {
   position: fixed;
   z-index: 9999; /* Ensure buttons are always on top */
   padding: 10px;
-  border-radius: 50%;
+  border-bottom-color: #2196F3;
   box-shadow: var(--shadow-3);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -139,7 +139,7 @@ a:not(.btn):not(.service-item):not(.project-img):hover {
   width: 40px;
   height: 40px;
   background: var(--bg-gradient-jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--blue-crayola);
   z-index: 10000; /* Higher z-index to stay on top */
   box-shadow: var(--shadow-2);
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
@@ -156,20 +156,20 @@ a:not(.btn):not(.service-item):not(.project-img):hover {
   bottom: 20px;
   right: 20px;
   background: var(--bg-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--blue-crayola);
   width: 45px;
   height: 45px;
   z-index: 9999;
   opacity: 0;
   visibility: hidden; /* Hidden by default */
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s, box-shadow 0.3s;
-  border-radius: 50%;
+  border-bottom-color: #2196F3;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   box-shadow: var(--shadow-2);
-  border: 2px solid var(--orange-yellow-crayola);
+  border: 2px solid var(--blue-crayola);
   user-select: none;
   -webkit-user-select: none;
 }
@@ -208,17 +208,17 @@ a:not(.btn):not(.service-item):not(.project-img):hover {
           hsla(0, 0%, 90%, 0.251) 0%,
           hsla(0, 0%, 85%, 0) 100%),
       hsl(0, 0%, 95%);
-  --bg-gradient-yellow-1: linear-gradient(to bottom right,
-          hsl(45, 100%, 65%) 0%,
+  --bg-gradient--1: linear-gradient(to bottom right,
+          hsl(220, 90%, 65%) 0%,
           hsla(36, 100%, 60%, 0) 50%);
-  --bg-gradient-yellow-2: linear-gradient(135deg,
+  --bg-gradient--2: linear-gradient(135deg,
           hsla(45, 100%, 65%, 0.251) 0%,
           hsla(35, 100%, 58%, 0) 59.86%),
       hsl(0, 0%, 95%);
   --border-gradient-onyx: linear-gradient(to bottom right,
           hsl(0, 0%, 80%) 0%,
           hsla(0, 0%, 75%, 0) 50%);
-  --text-gradient-yellow: linear-gradient(to right,
+  --text-gradient-: linear-gradient(to right,
           hsl(45, 100%, 55%),
           hsl(35, 100%, 50%));
   --text-gradient-custom: linear-gradient(to right,
@@ -233,18 +233,14 @@ a:not(.btn):not(.service-item):not(.project-img):hover {
   --smoky-black: hsl(0, 0%, 100%);
   --white-1: hsl(0, 0%, 10%);
   --white-2: hsl(0, 0%, 15%);
-  --orange-yellow-crayola: hsl(45, 100%, 55%);
-  --vegas-gold: hsl(45, 54%, 50%);
+  --blue-crayola: #2196F3;
+  --deep-blue: #1976D2;
+  --vegas-gold: hsl(220, 90%, 45%);
   --light-gray: hsl(0, 0%, 20%);
   --light-gray-70: hsla(0, 0%, 20%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 40%);
   --green-jade: hsl(159, 82%, 25%);
   --green-teal: hsl(118, 32%, 50%);
-
-  /* Tag Colors */
-  --unity-tag: hsl(197, 78%, 44%);
-  --unreal-tag: hsl(99, 41%, 38%);
-  --application-tag: hsl(9, 68%, 46%);
 }
 
 /* Fix for filter select dropdown in light mode */
@@ -272,8 +268,8 @@ a:not(.btn):not(.service-item):not(.project-img):hover {
   height: 45px;
   border-radius: 50%; /* Keep this circular */
   background: var(--bg-gradient-onyx);
-  color: var(--orange-yellow-crayola);
-  border: 2px solid var(--orange-yellow-crayola);
+  color: var(--blue-crayola);
+  border: 2px solid var(--blue-crayola);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,7 +330,7 @@ a:not(.btn):not(.service-item):not(.project-img):hover {
 }
 
 .light-mode .skills-button {
-  color: var(--orange-yellow-crayola);
+  color: var(--blue-crayola);
 }
 
 .light-mode .skills-button:hover {
@@ -439,7 +435,7 @@ img.lazy-load.loaded {
   }
 
   .light-mode .portfolio .project-item {
-    background: var(--bg-gradient-yellow-1);
+    background: var(--bg-gradient--1);
     color: var(--white-1);
   }
 }
@@ -568,7 +564,7 @@ img.lazy-load.loaded {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--orange-yellow-crayola);
+  background: #2196F3;
 }
 
 /* Print styles for better resume printing */

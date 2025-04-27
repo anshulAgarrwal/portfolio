@@ -2,6 +2,438 @@
   #style.css
 \*-----------------------------------*/
 
+/* ====== Clean Main Skills Section (matching 'What I'm Doing') ====== */
+.clean-section {
+  padding: 32px 0 0 0;
+  margin-bottom: 32px;
+}
+.section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.section-title-row .article-title {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+.section-accent {
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--blue--crayola);
+}
+.main-skills-card-grid {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.skill-card {
+  background: var(--eerie-black-2, #232323);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 24px 22px;
+  min-width: 220px;
+  max-width: 270px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.skill-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+  transform: translateY(-2px) scale(1.03);
+}
+.resume-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .main-skills-card-grid {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .skill-card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 18px 8px;
+  }
+}
+
+/* Remove previous main-skills restyled/side-by-side block background for this section */
+
+.main-skills.restyled {
+  max-width: 900px;
+  margin: 40px auto 32px auto;
+  background: linear-gradient(135deg, #232b3b 0%, #1a2233 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 32px 24px 18px 24px;
+  border: none;
+}
+
+.main-skills-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.main-skills-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 18px;
+  flex-wrap: nowrap;
+}
+
+.skill-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  padding: 24px 18px;
+  flex: 1 1 0;
+  min-width: 200px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skill-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 214, 98, 0.18);
+}
+
+.resume-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.skills-button.restyled {
+  background: linear-gradient(90deg, #428dff, #005bea);
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 214, 98, 0.10);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  min-width: 180px;
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+.skills-button.restyled:hover {
+  background: linear-gradient(90deg, #005bea, #428dff);
+  color: #000;
+  transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .main-skills.restyled {
+    padding: 22px 6vw 12px 6vw;
+  }
+  .main-skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+  .main-skills-grid {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .skill-card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 18px 8px;
+  }
+}
+
+  background: linear-gradient(135deg, #232b3b 0%, #1a2233 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 32px 24px;
+  margin: 32px 0;
+  border: none;
+}
+
+.main-skills-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+/* Removed .resume-card as it is no longer used */
+.main-skills-wrapper {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.resume-btn-container {
+  margin-top: 32px;
+  text-align: center;
+  display: block;
+}
+.resume-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 56px;
+  text-align: center;
+}
+.resume-btn-container .skills-button.restyled {
+  min-width: 220px;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+  background: rgba(20, 22, 30, 0.7);
+  border: 2px solid #2196f3;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  max-width: 280px;
+  min-height: 220px;
+  box-shadow: 0 2px 16px rgba(50, 110, 255, 0.08);
+  margin: 0 8px;
+  transition: box-shadow 0.18s, border-color 0.18s;
+}
+.resume-card:hover {
+  box-shadow: 0 4px 24px rgba(50, 110, 255, 0.18);
+  border-color: #4eaaff;
+}
+.resume-card .skills-button.restyled {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-size: 1.08em;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+.resume-card .skills-button.restyled:hover {
+  color: #4eaaff;
+}
+
+
+.skill-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  padding: 24px 18px;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skill-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 214, 98, 0.18);
+}
+
+.skill-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blue--crayola);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-icon {
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills-item {
+  background: rgba(30, 34, 44, 0.92);
+  color: #fff;
+  border-radius: 10px;
+  padding: 7px 18px;
+  font-weight: 600;
+  font-size: 1.08em;
+  border: none;
+  text-decoration: none !important;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 6px rgba(50, 110, 255, 0.07);
+}
+.skills-item:hover {
+  background: #294c7c;
+  color: #fff;
+}
+
+.skill-card {
+  background: rgba(30, 34, 44, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(50, 110, 255, 0.08);
+  padding: 30px 22px 24px 22px;
+  margin: 0 8px;
+  min-width: 220px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.skill-card:hover {
+  box-shadow: 0 4px 24px rgba(50, 110, 255, 0.18);
+  transform: translateY(-3px) scale(1.025);
+}
+
+.skill-title {
+  margin-bottom: 18px;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #4eaaff;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skill-icon {
+  font-size: 1.25em;
+  vertical-align: middle;
+}
+.skills-item:hover {
+  background: var(--blue--crayola);
+  color: #222;
+}
+
+.resume-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.skills-button.restyled {
+  background: linear-gradient(90deg, #428dff, #005bea);
+  color: #222;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 34px;
+  font-size: 1.1em;
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgba(0, 214, 98, 0.15);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.skills-button.restyled:hover {
+  background: linear-gradient(90deg, #005bea, #428dff);
+  color: #000;
+  transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .main-skills-grid {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .skill-card {
+    max-width: 100%;
+  }
+}
+
+/* === Skill Card Text & Resume Button Refinement === */
+.skills-item {
+  background: none;
+  color: var(--blue--crayola);
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-weight: 500;
+  font-size: 1em;
+  border: none;
+  text-decoration: none;
+  transition: color 0.2s;
+  margin: 0 4px 4px 0;
+  display: inline-block;
+}
+.skills-item:hover {
+  color: var(--vegas-gold);
+  background: none;
+  cursor: pointer;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.resume-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.skills-button.restyled {
+  background: linear-gradient(90deg, #428dff, #005bea);
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-size: 1em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 214, 98, 0.10);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  min-width: unset;
+  width: auto;
+}
+.skills-button.restyled:hover {
+  background: linear-gradient(90deg, #005bea, #428dff);
+  color: #000;
+  transform: scale(1.03);
+}
+
+
 /**
  * copyright 2022 @codewithsadee
  */
@@ -24,17 +456,17 @@
             hsla(240, 1%, 18%, 0.251) 0%,
             hsla(240, 2%, 11%, 0) 100%),
         hsl(240, 2%, 13%);
-    --bg-gradient-yellow-1: linear-gradient(to bottom right,
-            hsl(45, 100%, 71%) 0%,
+    --bg-gradient--1: linear-gradient(to bottom right,
+            hsl(220, 90%, 65%) 0%,
             hsla(36, 100%, 69%, 0) 50%);
-    --bg-gradient-yellow-2: linear-gradient(135deg,
+    --bg-gradient--2: linear-gradient(135deg,
             hsla(45, 100%, 71%, 0.251) 0%,
             hsla(35, 100%, 68%, 0) 59.86%),
         hsl(240, 2%, 13%);
     --border-gradient-onyx: linear-gradient(to bottom right,
             hsl(0, 0%, 25%) 0%,
             hsla(0, 0%, 25%, 0) 50%);
-    --text-gradient-yellow: linear-gradient(to right,
+    --text-gradient-: linear-gradient(to right,
             hsl(45, 100%, 72%),
             hsl(35, 100%, 68%));
     --text-gradient-custom: linear-gradient(to right,
@@ -53,8 +485,8 @@
     --smoky-black: hsl(0, 0%, 7%);
     --white-1: hsl(0, 0%, 100%);
     --white-2: hsl(0, 0%, 98%);
-    --orange-yellow-crayola: hsl(45, 100%, 72%);
-    --vegas-gold: hsl(45, 54%, 58%);
+    --blue--crayola: hsl(220, 90%, 65%);
+    --vegas-gold: hsl(220, 90%, 45%);
     --light-gray: hsl(0, 0%, 84%);
     --light-gray-70: hsla(0, 0%, 84%, 0.7);
     --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -135,7 +567,7 @@
     height: 50px;
     border: 5px solid var(--jet);
     border-radius: 50%;
-    border-top-color: var(--orange-yellow-crayola);
+    border-top-color: #2196F3;
     animation: spin 1s linear infinite;
 }
 
@@ -149,7 +581,7 @@
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--orange-yellow-crayola);
+    background: var(--blue--crayola);
     color: var(--eerie-black-2);
     padding: 8px;
     z-index: 10000;
@@ -167,7 +599,7 @@
 .old-version {
     position: initial;
     background: var(--border-gradient-onyx);
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +617,7 @@
 
 .old-version:hover {
     background: var(--bg-gradient-onyx);
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     transform: translateY(-2px);
 }
 
@@ -215,7 +647,7 @@
 
 .portfolio-back:hover {
     background: var(--bg-gradient-onyx);
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     transform: translateY(-2px);
 }
 
@@ -445,12 +877,12 @@ textarea {
 }
 
 ::selection {
-    background: var(--orange-yellow-crayola);
+    background: var(--blue--crayola);
     color: var(--smoky-black);
 }
 
 :focus {
-    outline-color: var(--orange-yellow-crayola);
+    outline-color: var(--blue--crayola);
 }
 
 html {
@@ -492,7 +924,7 @@ article {
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     box-shadow: var(--shadow-1);
     z-index: 1;
 }
@@ -586,7 +1018,7 @@ article.active {
     left: 0;
     width: 30px;
     height: 3px;
-    background: var(--text-gradient-yellow);
+    background: #2196F3;
     border-radius: 3px;
 }
 
@@ -603,7 +1035,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--orange-yellow-crayola);
+    background: var(--blue--crayola);
     border-radius: 5px;
 }
 
@@ -703,7 +1135,7 @@ main {
     right: -15px;
     border-radius: 0 15px;
     font-size: 13px;
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     background: var(--border-gradient-onyx);
     padding: 10px;
     box-shadow: var(--shadow-2);
@@ -771,7 +1203,7 @@ main {
 }
 
 .navbar-link.active {
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
 }
 
 /*-----------------------------------*\
@@ -834,10 +1266,6 @@ main {
     margin-bottom: 10px;
 }
 
-.service-icon-box img {
-    margin: auto;
-}
-
 .service-content-box {
     text-align: center;
 }
@@ -850,7 +1278,7 @@ main {
 .service-item-text {
     color: var(--light-gray);
     font-size: var(--fs-6);
-    font-weight: var(--fw-3);
+    font-weight: var(--fw-300);
     line-height: 1.6;
 }
 
@@ -1138,7 +1566,7 @@ main {
 
 .timeline-item-responsibility::before {
     content: "•";
-    color: var(--text-gradient-yellow);
+    color: var(--text-gradient-);
     padding-right: 6px;
     margin-left: -12px;
 }
@@ -1166,7 +1594,7 @@ main {
     left: -45px;
     height: 10px;
     width: 10px;
-    background: var(--text-gradient-yellow);
+    background: var(--text-gradient-);
     border-radius: 50%;
     box-shadow: 0 0 0 4px var(--jet);
 }
@@ -1239,7 +1667,7 @@ main {
 
 .main-skills {
     display: flex;
-    border: 1px solid var(--vegas-gold);
+    border: 1px solid #428dff;
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 30px;
@@ -1328,7 +1756,7 @@ main {
     color: #fff;
     font-weight: bold;
     text-decoration: underline;
-    border: 1px solid #333;
+    border-bottom: 3px solid #2196F3;
     border-radius: 10px;
     padding: 5px;
     background-color: var(--text-gradient-custom);
@@ -1340,7 +1768,7 @@ main {
     position: relative;
     width: 100%;
     background: var(--border-gradient-onyx);
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -1368,11 +1796,11 @@ main {
 }
 
 .skills-button:hover {
-    background: var(--bg-gradient-yellow-1);
+    background: var(--bg-gradient--1);
 }
 
 .skills-button:hover::before {
-    background: var(--bg-gradient-yellow-2);
+    background: linear-gradient(135deg, #232b3b 0%, #1a2233 100%);
 }
 
 .skills-button:disabled {
@@ -1505,7 +1933,7 @@ main {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 20px;
-    border: 1px solid #333;
+    border-bottom: 3px solid #2196F3;
 }
 
 .project-img::before {
@@ -1577,7 +2005,7 @@ main {
     --scale: 0.8;
 
     background: var(--jet);
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1627,7 +2055,7 @@ main {
 }
 
 .project-category .tag {
-    border: 1px solid #333;
+    border-bottom: 3px solid #2196F3;
     padding: 2px 5px;
 }
 
@@ -1713,7 +2141,7 @@ main {
 }
 
 .blog-post-item>a:hover .blog-item-title {
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
 }
 
 .blog-text {
@@ -1798,7 +2226,7 @@ main {
 }
 
 .form-input:focus {
-    border-color: var(--orange-yellow-crayola);
+    border-color: var(--blue--crayola);
 }
 
 textarea.form-input {
@@ -1821,7 +2249,7 @@ textarea.form-input::-webkit-resizer {
     position: relative;
     width: 100%;
     background: var(--border-gradient-onyx);
-    color: var(--orange-yellow-crayola);
+    color: var(--blue--crayola);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1850,11 +2278,11 @@ textarea.form-input::-webkit-resizer {
 }
 
 .form-btn:hover {
-    background: var(--bg-gradient-yellow-1);
+    background: var(--bg-gradient--1);
 }
 
 .form-btn:hover::before {
-    background: var(--bg-gradient-yellow-2);
+    background: linear-gradient(135deg, #232b3b 0%, #1a2233 100%);
 }
 
 .form-btn:disabled {
@@ -1877,6 +2305,7 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 280px screen
  */
+
 @media (min-width: 280px) {
     /**
    * client
@@ -1912,13 +2341,14 @@ textarea.form-input::-webkit-resizer {
     .service-list {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px 25px;
+        gap: 20px;
     }
 }
 
 /**
  * responsive larger than 350px screen
  */
+
 @media (min-width: 350px) {
     /**
    * client
@@ -2072,6 +2502,7 @@ textarea.form-input::-webkit-resizer {
     .article-title::after {
         width: 40px;
         height: 5px;
+        background: #2196F3;
     }
 
     .icon-box {
@@ -2438,7 +2869,7 @@ textarea.form-input::-webkit-resizer {
 
   .filter-item button:hover { color: var(--light-gray-70); }
 
-  .filter-item button.active { color: var(--orange-yellow-crayola); }
+  .filter-item button.active { color: var(--blue--crayola); }
 
   /* portfolio and blog grid */
 
@@ -2728,7 +3159,7 @@ textarea.form-input::-webkit-resizer {
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    border: 2px solid var(--orange-yellow-crayola);
+    border: 2px solid #2196F3;
     border-radius: 50%;
     border-top-color: transparent;
     animation: spin 1s linear infinite;
@@ -2757,6 +3188,26 @@ textarea.form-input::-webkit-resizer {
     }
 }
 
+@keyframes zoom-out {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.85);
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 /* Improve button interactions */
 .portfolio-back,
 .skills-button,
@@ -2777,133 +3228,6 @@ textarea.form-input::-webkit-resizer {
 .form-btn:active,
 .old-version:active {
     transform: translateY(1px);
-}
-
-/*-----------------------------------*\
-  #RESPONSIVE TWEAKS
-\*-----------------------------------*/
-
-@media (max-width: 400px) {
-    .service {
-        margin-left: 10px; /* Reduced from 20px for very small screens */
-    }
-    
-    .service-item {
-        height: auto;
-        padding: 10px;
-    }
-    
-    .service-icon-box {
-        padding-top: 10px;
-        height: 40px;
-    }
-}
-
-/*-----------------------------------*\
-  #IMPROVED CTA BUTTONS
-\*-----------------------------------*/
-
-/* Base improvements for all interactive elements */
-.navbar-link,
-.form-btn,
-.skills-button,
-.portfolio-back,
-.old-version,
-.project-item > a,
-.social-link,
-.contact-link {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Consistent hover effects */
-.navbar-link:hover,
-.social-link:hover,
-.contact-link:hover {
-    transform: translateY(-3px);
-}
-
-/* Primary buttons with more pronounced effects */
-.form-btn,
-.skills-button,
-.portfolio-back,
-.old-version {
-    /* Base state with slight shadow */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-btn:hover,
-.skills-button:hover,
-.portfolio-back:hover,
-.old-version:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Active state for buttons with visual feedback */
-.form-btn:active,
-.skills-button:active,
-.portfolio-back:active,
-.old-version:active,
-.social-link:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-
-/* Focus states for accessibility */
-.navbar-link:focus-visible,
-.form-btn:focus-visible,
-.skills-button:focus-visible,
-.portfolio-back:focus-visible,
-.old-version:focus-visible,
-.social-link:focus-visible,
-.contact-link:focus-visible {
-    outline: 2px solid var (--orange-yellow-crayola);
-    outline-offset: 4px;
-}
-
-/* Add subtle pulse effect for primary CTA */
-@keyframes subtle-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(248, 182, 79, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(248, 182, 79, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(248, 182, 79, 0); }
-}
-
-.skills-button:hover {
-    animation: subtle-pulse 2s infinite;
-}
-
-/* Improved tap area for mobile */
-@media (max-width: 768px) {
-    .navbar-link,
-    .social-link,
-    .form-btn,
-    .skills-button,
-    .portfolio-back,
-    .old-version {
-        padding: 12px 20px;  /* Larger tap targets on mobile */
-    }
-    
-    .service-item {
-        padding: 16px;       /* More padding for larger touch targets */
-    }
-}
-
-/* Remove existing animations that might conflict with new ones */
-.portfolio-back:hover,
-.skills-button:hover,
-.form-btn:hover,
-.old-version:hover {
-    transform: translateY(-3px);   /* Override the existing translateY(-2px) */
-}
-
-.portfolio-back:active,
-.skills-button:active,
-.form-btn:active,
-.old-version:active {
-    transform: translateY(1px);    /* Consistent active state */
 }
 
 /* Enhanced button styles with modern shadow effects */
@@ -2938,6 +3262,16 @@ textarea.form-input::-webkit-resizer {
     0% {
         transform: scale(0, 0);
         opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}       opacity: 0.5;
     }
     20% {
         transform: scale(25, 25);

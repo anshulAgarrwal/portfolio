@@ -25,5 +25,8 @@
   "homepage": "https://github.com/Long18/long18.github.io#readme",
   "devDependencies": {
     "standard-version": "^9.5.0"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
   }
 }
