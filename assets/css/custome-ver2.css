@@ -296,10 +296,6 @@
   transition: background 0.2s, color 0.2s;
   box-shadow: 0 1px 6px rgba(50, 110, 255, 0.07);
 }
-.skills-item:hover {
-  background: #294c7c;
-  color: #fff;
-}
 
 .skill-card {
   background: rgba(30, 34, 44, 0.92);
@@ -332,10 +328,6 @@
 .skill-icon {
   font-size: 1.25em;
   vertical-align: middle;
-}
-.skills-item:hover {
-  background: var(--blue--crayola);
-  color: #222;
 }
 
 .resume-btn-container {
@@ -384,11 +376,6 @@
   transition: color 0.2s;
   margin: 0 4px 4px 0;
   display: inline-block;
-}
-.skills-item:hover {
-  color: var(--vegas-gold);
-  background: none;
-  cursor: pointer;
 }
 
 .skills-list {
@@ -546,33 +533,38 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--smoky-black);
+    background-color: #121212; /* Dark background */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.5s ease;
-}
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    visibility: visible;
+  }
 
 .loading-overlay.hidden {
     opacity: 0;
     pointer-events: none;
 }
 
+/* Spinner Animation */
 .loading-spinner {
     width: 50px;
     height: 50px;
-    border: 5px solid var(--jet);
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #fff;
     border-radius: 50%;
-    border-top-color: #2196F3;
     animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 /* Skip link for accessibility */
 .skip-link {
     position: absolute;
@@ -589,6 +581,12 @@
     top: 0;
 }
 
+/* Loading Text */
+.loading-text {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
 /*-----------------------------------*\
   #BACK VERSION
 \*-----------------------------------*/
@@ -1514,7 +1512,7 @@ main {
 }
 
 .timeline .title-wrapper .h3 {
-    color: var(--blue--crayola);
+    color: var(--white-2);
     line-height: 1.2;
     font-size: var(--fs-1);
 }
@@ -1542,7 +1540,7 @@ main {
 }
 
 .timeline-item-title {
-    color: var(--vegas-gold);
+    color: #2196F3;
     line-height: 1.2;
     margin-bottom: 7px;
 }
@@ -1726,7 +1724,7 @@ main {
 .skills-category .skills-header {
     margin-bottom: 20px;
     font-size: 20px;
-    color: var(--vegas-gold)
+    color: #2196F3
 }
 
 .skills-category {
