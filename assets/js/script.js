@@ -383,6 +383,9 @@ function animateEntrances() {
   });
 }
   window.expandImage = function(clickedImage) {
+  // Hide main loading overlay if visible
+  const mainOverlay = document.getElementById('loading-overlay');
+  if (mainOverlay) mainOverlay.style.display = "none";
     if (!clickedImage || !clickedImage.querySelector("img")) return;
     
     // Add tactile feedback with subtle scale animation on click
@@ -399,6 +402,12 @@ function animateEntrances() {
     const loadingSpinner = document.createElement('div');
     loadingSpinner.className = 'loading-spinner';
     overlay.appendChild(loadingSpinner);
+    // Remove spinner when image loads
+    expandedImg.onload = function () {
+      if (loadingSpinner && loadingSpinner.parentNode) {
+        loadingSpinner.parentNode.removeChild(loadingSpinner);
+      }
+    };
 
     // Create expanded image with improved styling
     expandedImg.src = imgSrc;
@@ -426,6 +435,9 @@ function animateEntrances() {
 
   // Re-implement expandVideo with proper error checking
   window.expandVideo = function(clickedVideo) {
+  // Hide main loading overlay if visible
+  const mainOverlay = document.getElementById('loading-overlay');
+  if (mainOverlay) mainOverlay.style.display = "none";
     if (!clickedVideo || !clickedVideo.querySelector("video") || 
         !clickedVideo.querySelector("video").querySelector("source")) return;
         
@@ -467,7 +479,7 @@ function animateEntrances() {
   const skillsButton = document.getElementById("skills-button");
   if (skillsButton && pages) {
     skillsButton.addEventListener("click", function () {
-      const skillsSection = document.getElementById("resume-section");
+      const skillsSection = document.getElementById("skills");
       
       pages.forEach((page, i) => {
         if (page.dataset.page === "resume") {

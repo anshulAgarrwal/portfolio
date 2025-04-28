@@ -477,9 +477,9 @@
     --blue-4: #005E7C;
     --blue-5: #040F16;
 
-    --unity-tag: #0094C6;
-    --unreal-tag: #0094C6;
-    --application-tag: #0094C6;
+    --unity-tag: #CEB15A;
+    --unreal-tag: #CEB15A;
+    --application-tag: #CEB15A;
 
     /**
    * typography
@@ -523,48 +523,8 @@
     --transition-2: 0.5s ease-in-out;
 }
 
-/*-----------------------------------*\
-  #LOADING OVERLAY
-\*-----------------------------------*/
+/* Loading overlay and spinner styles removed to resolve conflicts. Use custom-loader.css for loader styling. */
 
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #121212; /* Dark background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 1;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    visibility: visible;
-  }
-
-.loading-overlay.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Spinner Animation */
-.loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    border-top: 5px solid #fff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 /* Skip link for accessibility */
 .skip-link {
     position: absolute;
@@ -1603,6 +1563,7 @@ main {
 .timeline-text>li {
     content: "▹";
     position: relative;
+    text-align: justify;
 }
 
 .description::before {
@@ -3121,7 +3082,9 @@ textarea.form-input::-webkit-resizer {
 	 */
 
     .timeline-text {
-        max-width: 1200px;
+        max-width: 840px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
