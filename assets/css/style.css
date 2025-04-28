@@ -50,6 +50,11 @@
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: #1976D2;
+  --blue-1: #000022;
+    --blue-2: #001242;
+    --blue-3: #0094C6;
+    --blue-4: #005E7C;
+    --blue-5: #040F16;
 
   /**
    * typography
@@ -1173,7 +1178,7 @@ main {
 }
 
 .project-category {
-  color: var(--light-gray-70);
+  color: var(--blue-4);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }

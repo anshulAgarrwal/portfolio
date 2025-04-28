@@ -490,9 +490,9 @@
     --blue-4: #005E7C;
     --blue-5: #040F16;
 
-    --unity-tag: hsl(197, 78%, 64%);
-    --unreal-tag: hsl(99, 41%, 48%);
-    --application-tag: hsl(9, 68%, 56%);
+    --unity-tag: #0094C6;
+    --unreal-tag: #0094C6;
+    --application-tag: #0094C6;
 
     /**
    * typography
@@ -743,7 +743,7 @@
 }
 
 .unreal-icon .tag {
-    color: var(--unreal-tag);
+    color: var(--blue-3);
     font-size: var(--fs-7);
     font-weight: var(--fw-600);
     white-space: nowrap;
@@ -762,7 +762,7 @@
 }
 
 .chplay-icon .tag {
-    color: var(--green-teal);
+    color: var(--blue-3);
     font-size: var(--fs-7);
     font-weight: var(--fw-600);
     white-space: nowrap;
@@ -781,7 +781,7 @@
 }
 
 .applestore-icon .tag {
-    color: var(--green-teal);
+    color: var(--blue-3);
     font-size: var(--fs-7);
     font-weight: var(--fw-600);
     white-space: nowrap;
@@ -3138,7 +3138,7 @@ textarea.form-input::-webkit-resizer {
     background: none;
     border: none;
     cursor: pointer;
-    width: 300px; /* Increase button size */
+    width: 250px; /* Increase button size */
     height: 80px;
     transition: transform 0.3s ease;
   }
