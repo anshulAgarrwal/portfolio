@@ -479,7 +479,7 @@ function animateEntrances() {
   const skillsButton = document.getElementById("skills-button");
   if (skillsButton && pages) {
     skillsButton.addEventListener("click", function () {
-      const skillsSection = document.getElementById("skills");
+      const skillsSection = document.getElementById("resume-section");
       
       pages.forEach((page, i) => {
         if (page.dataset.page === "resume") {
