@@ -36,7 +36,7 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="assets/css/style.css" as="style">
   <link rel="preload" href="assets/css/animations.css" as="style">
-  <link rel="preload" href="assets/images/avatar.png" as="image">
+  <link rel="preload" href="assets/images/me_avatar.png" as="image">
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -316,7 +316,7 @@
 
             </li>
 
-            <!-- <li class="service-item">
+            <li class="service-item">
 
               <div class="service-icon-box">
                 <img
@@ -328,17 +328,30 @@
                 <h4 class="h4 service-item-title unreal-tag">Unreal development</h4>
               </div>
 
-            </li> -->
+            </li>
             <li class="service-item">
 
               <div class="service-icon-box">
                 <img
                   src="https://github.com/Long18/long18.github.io/assets/28853225/5bdf960a-bfe1-499e-b4e2-fb9fa0e19af2"
-                  alt="Unreal Developer" width="35">
+                  alt="application Developer" width="35">
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title application-tag">Application development</h4>
+              </div>
+
+            </li>
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img
+                  src="https://github.com/Long18/long18.github.io/assets/28853225/5bdf960a-bfe1-499e-b4e2-fb9fa0e19af2"
+                  alt="web Developer" width="35">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title application-tag">Web development</h4>
               </div>
 
             </li>
@@ -348,7 +361,7 @@
           <h2 class="h2 article-title">Main Skills</h2>
         </header>
 
-  <section class="main-skills restyled">
+  
     <div class="main-skills-wrapper">
       <div class="main-skills-grid">
         <div class="skill-card">
@@ -388,7 +401,7 @@
         </button>
       </div>
     </div>
-  </section>
+
 
         <!--
           - testimonials
@@ -705,11 +718,12 @@
 
               <h4 class="h4 timeline-item-title">Poornima College of Engineering</h4>
 
-              <span>Sep/2014 — Sep/2018</span>
 
               <div class="timeline-description">
                 B.Tech Engineering -Computer Science
               </div>
+
+              <span>Sep/2014 — Sep/2018</span>
 
               <!-- <div class="timeline-gpa">
                 <h5 class="h5">GPA:</h5>
@@ -4969,23 +4983,12 @@
           </figure>
         </section>
 
-        <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-          <form action="php/contact.php" method="post" id="contactForm" data-toggle="valiator" class="form contactForm" data-form>
-            <div class="input-wrapper">
-              <!-- Add more form fields if needed -->
-              <input type="text" name="name" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            
-            <textarea name="comments" rows="4" class="form-input" placeholder="Your Message.." required data-form-input></textarea>
-            
-            <button class="form-btn submitBnt" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
+        <div class="contact-whatsapp">
+          <button class="whatsapp-connect" type="button" onclick="window.open('https://wa.me/917014359120', '_blank')">
+                <img src="assets/images/WhatsAppButtonWhiteLarge.png" alt="Chat on WhatsApp" width="100">
+          </button>  
+        </div>
+        
       </article>
 
     </div>

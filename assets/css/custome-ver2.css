@@ -53,7 +53,7 @@
 .resume-btn-container {
   display: flex;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 25px;
 }
 
 @media (max-width: 900px) {
@@ -71,15 +71,7 @@
 
 /* Remove previous main-skills restyled/side-by-side block background for this section */
 
-.main-skills.restyled {
-  max-width: 900px;
-  margin: 40px auto 32px auto;
-  background: linear-gradient(135deg, #232b3b 0%, #1a2233 100%);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  padding: 32px 24px 18px 24px;
-  border: none;
-}
+
 
 .main-skills-title {
   text-align: center;
@@ -316,7 +308,7 @@
   padding: 30px 22px 24px 22px;
   margin: 0 8px;
   min-width: 220px;
-  min-height: 220px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -412,7 +404,7 @@
 .resume-btn-container {
   display: flex;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 25px;
 }
 .skills-button.restyled {
   background: linear-gradient(90deg, #428dff, #005bea);
@@ -467,8 +459,8 @@
             hsl(0, 0%, 25%) 0%,
             hsla(0, 0%, 25%, 0) 50%);
     --text-gradient-: linear-gradient(to right,
-            hsl(45, 100%, 72%),
-            hsl(35, 100%, 68%));
+            #005E7C,
+            #0094C6);
     --text-gradient-custom: linear-gradient(to right,
             hsl(45, 100%, 72%),
             hsl(35, 100%, 68%));
@@ -492,6 +484,11 @@
     --bittersweet-shimmer: hsl(0, 43%, 51%);
     --green-jade: hsl(159, 82%, 22%);
     --green-teal: hsl(118, 32%, 60%);
+    --blue-1: #000022;
+    --blue-2: #001242;
+    --blue-3: #0094C6;
+    --blue-4: #005E7C;
+    --blue-5: #040F16;
 
     --unity-tag: hsl(197, 78%, 64%);
     --unreal-tag: hsl(99, 41%, 48%);
@@ -1078,8 +1075,8 @@ main {
 \*-----------------------------------*/
 
 .sidebar {
-    margin-bottom: 15px;
-    max-height: 130px;
+    margin-bottom: 0px;
+    max-height: 200px;
     overflow: hidden;
     transition: var(--transition-2);
 }
@@ -1231,7 +1228,6 @@ main {
 
 .service {
     margin-bottom: 35px;
-    margin-left: 100px;
 }
 
 .service-title {
@@ -1518,7 +1514,7 @@ main {
 }
 
 .timeline .title-wrapper .h3 {
-    color: var(--green-teal);
+    color: var(--blue--crayola);
     line-height: 1.2;
     font-size: var(--fs-1);
 }
@@ -1572,7 +1568,7 @@ main {
 }
 
 .timeline-list span {
-    color: #F6E9B2;
+    color: --bl;
     font-weight: var(--fw-400);
     line-height: 1.6;
 }
@@ -1617,7 +1613,7 @@ main {
 
 .timeline-description {
     position: relative;
-    color: var(--green-teal);
+    color: var(--white-2);
     padding-bottom: 5px;
 }
 
@@ -1628,7 +1624,7 @@ main {
 }
 
 .timeline-education-text::before {
-    content: "▹";
+    content: "▹ ";
     position: relative;
 }
 
@@ -2247,7 +2243,6 @@ textarea.form-input::-webkit-resizer {
 
 .form-btn {
     position: relative;
-    width: 100%;
     background: var(--border-gradient-onyx);
     color: var(--blue--crayola);
     display: flex;
@@ -2329,9 +2324,6 @@ textarea.form-input::-webkit-resizer {
         margin-bottom: 25px;
     }
 
-    .service {
-        margin-left: 20px;
-    }
 
     .service-icon-box {
         padding-top: 20px;
@@ -2372,9 +2364,6 @@ textarea.form-input::-webkit-resizer {
         margin-bottom: 25px;
     }
 
-    .service {
-        margin-left: 20px;
-    }
 
     .service-icon-box {
         padding-top: 20px;
@@ -2396,7 +2385,6 @@ textarea.form-input::-webkit-resizer {
     .service-list {
         margin-left: 0px;
         display: grid;
-        grid-template-columns: 0.5fr 0.5fr;
         gap: 20px 25px;
     }
 
@@ -2969,7 +2957,6 @@ textarea.form-input::-webkit-resizer {
     /* service */
 
     .service-list {
-        grid-template-columns: 0.25fr 0.25fr 0.25fr;
         gap: 20px 25px;
     }
 
@@ -3139,6 +3126,31 @@ textarea.form-input::-webkit-resizer {
         max-width: 1200px;
     }
 }
+
+.contact-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space below the map */
+  }
+  
+  .whatsapp-connect {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 300px; /* Increase button size */
+    height: 80px;
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-connect img {
+    width: 100%; /* Ensure the image fills the button */
+    height: auto;
+  }
+  
+  .whatsapp-connect:hover {
+    transform: scale(1.1); /* Add a hover effect */
+  }
 
 /*-----------------------------------*\
   #IMPROVED LOADING STATES

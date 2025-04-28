@@ -930,7 +930,7 @@ main {
 }
 
 .timeline-text li::before {
-  content: "▹";
+  content: "▹ ";
   position: relative;
   color: var(--text-gradient-);
   font-size: var(--fw-300);
