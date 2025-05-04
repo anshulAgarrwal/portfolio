@@ -387,6 +387,10 @@ img.lazy-load.loaded {
     gap: 15px; /* Reduce gap for tighter layout */
   }
   
+  .project-list-thumb {
+    gap: 15px; /* Reduce gap for tighter layout */
+  }
+  
   .project-item {
     width: 100%;
     margin-bottom: 15px;
@@ -529,6 +533,12 @@ img.lazy-load.loaded {
 .project-list {
   animation: fadeIn 0.8s ease forwards;
 }
+
+.project-list-thumb {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+
 
 /* Stagger animation delays for list items */
 .project-item:nth-child(1),

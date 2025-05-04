@@ -41,6 +41,9 @@ img, video, iframe {
 .project-list {
   overflow: hidden;
 }
+.project-list-thumb {
+  overflow: hidden;
+}
 
 .project-item {
   overflow: hidden;

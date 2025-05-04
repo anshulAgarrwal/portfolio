@@ -1072,7 +1072,7 @@ main {
   background: var(--port-teal);
 }
 
-.project-list {
+.project-list-thumb {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
@@ -1928,7 +1928,7 @@ textarea.form-input::-webkit-resizer {
 
   /* portfolio and blog grid */
 
-  .project-list,
+  .project-list-thumb,
   .blog-posts-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -2061,7 +2061,7 @@ textarea.form-input::-webkit-resizer {
    * PORTFOLIO
    */
 
-  .project-list {
+  .project-list-thumb {
     grid-template-columns: repeat(3, 1fr);
   }
 
