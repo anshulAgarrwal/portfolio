@@ -542,3 +542,20 @@ function createOverlay(elementToRemove) {
   
   return overlay;
 }
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[data-detail-category]');
+  if (link) {
+    e.preventDefault();
+    const category = link.getAttribute('data-detail-category');
+    document.querySelectorAll('section.project-item[data-detail-category]').forEach(section => {
+      section.classList.remove('active');
+      section.classList.add('data-deactive-item');
+    });
+    const detailSection = document.querySelector('section.project-item[data-detail-category="' + category + '"]');
+    if (detailSection) {
+      detailSection.classList.add('active');
+      detailSection.classList.remove('data-deactive-item');
+      detailSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+});
